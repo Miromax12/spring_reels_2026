@@ -79,10 +79,10 @@
             </div>
             <span class="font-extrabold text-2xl tracking-tight text-[#FDF6F0]">BRIONEL™</span>
           </div>
-          <button class="bg-[#F7C5A8] hover:bg-white text-[#2D6B46] px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_8px_20px_rgba(247,197,168,0.3)] text-sm sm:text-base flex items-center gap-2">
-            Приєднатись
+          <a href="#prizes" class="bg-[#F7C5A8] hover:bg-white text-[#2D6B46] px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_8px_20px_rgba(247,197,168,0.3)] text-sm sm:text-base flex items-center gap-2">
+            Умови участі
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -115,50 +115,46 @@
               <span class="inline-block ml-2">🌷</span>
             </h1>
 
-            <p class="text-xl md:text-2xl text-white/70 mb-10 max-w-lg font-medium">
+            <p class="text-xl md:text-2xl text-white/70 mb-8 max-w-lg font-medium">
               Приєднуйтесь до марафону та розкрийте свій потенціал у створенні контенту. 1 день = 1 відео.
             </p>
 
-            <div class="flex flex-col sm:flex-row items-center gap-5">
-              <button class="w-full sm:w-auto px-8 py-4 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-bold text-lg transition-all shadow-[0_10px_30px_rgba(247,197,168,0.3)] hover:shadow-[0_10px_40px_rgba(247,197,168,0.5)] transform hover:-translate-y-1 flex items-center justify-center gap-3">
-                Приєднатись до марафону
-              </button>
-              <div class="flex items-center gap-4">
-                <div class="flex flex-col justify-center px-6 py-3 bg-white/10 rounded-2xl border border-white/20">
-                  <span class="text-sm text-white/60 font-semibold uppercase tracking-wider">Старт</span>
-                  <span class="text-white font-bold text-lg flex items-center gap-2">
-                    <i data-lucide="calendar-days" class="w-4 h-4 text-[#F7C5A8]"></i> 09.03
-                  </span>
+            <!-- Countdown Timer -->
+            <div class="mb-8">
+              <p id="countdown-label" class="text-xs text-white/50 uppercase tracking-wider font-bold mb-3 flex items-center gap-2">
+                <i data-lucide="timer" class="w-4 h-4 text-[#F7C5A8]"></i> До старту 09.03
+              </p>
+              <div id="countdown-timer" class="flex gap-3">
+                <div class="text-center bg-white/10 rounded-xl px-4 py-2.5 border border-white/20 min-w-[64px]">
+                  <div id="cd-days" class="text-3xl font-black text-white leading-none">0</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">дні</div>
+                </div>
+                <div class="text-center bg-white/10 rounded-xl px-4 py-2.5 border border-white/20 min-w-[64px]">
+                  <div id="cd-hours" class="text-3xl font-black text-white leading-none">0</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">год</div>
+                </div>
+                <div class="text-center bg-white/10 rounded-xl px-4 py-2.5 border border-white/20 min-w-[64px]">
+                  <div id="cd-mins" class="text-3xl font-black text-white leading-none">0</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">хв</div>
+                </div>
+                <div class="text-center bg-white/10 rounded-xl px-4 py-2.5 border border-white/20 min-w-[64px]">
+                  <div id="cd-secs" class="text-3xl font-black text-white leading-none">0</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">с</div>
                 </div>
               </div>
+              <p id="marathon-started" class="hidden text-2xl font-black text-[#F7C5A8] mt-3">Марафон розпочато! 🌸</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-5">
+              <a href="#" class="w-full sm:w-auto px-8 py-4 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-bold text-lg transition-all shadow-[0_10px_30px_rgba(247,197,168,0.3)] hover:shadow-[0_10px_40px_rgba(247,197,168,0.5)] transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                Приєднатись до марафону
+              </a>
             </div>
           </div>
 
           <!-- Right Side - Phone Mockup -->
           <div class="hero-right mt-10 lg:mt-0 relative">
             <div class="relative w-full max-w-sm mx-auto aspect-[4/5]">
-
-              <!-- Floating Card 1: Likes -->
-              <div class="absolute top-12 -left-8 md:-left-16 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float z-30 flex items-center gap-3 border-l-4 border-[#F7C5A8]">
-                <div class="bg-[#F7C5A8] p-2.5 rounded-full shadow-inner">
-                  <i data-lucide="heart" class="w-6 h-6 text-white" style="fill:white;"></i>
-                </div>
-                <div>
-                  <div class="font-black text-xl text-white">+1,250</div>
-                  <div class="text-xs text-white/60 font-bold uppercase tracking-wider">реакцій</div>
-                </div>
-              </div>
-
-              <!-- Floating Card 2: Views/Top -->
-              <div class="absolute bottom-24 -right-4 md:-right-12 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float animation-delay-2000 z-30 flex items-center gap-3 border-l-4 border-[#F7C5A8]">
-                <div class="bg-[#3B8C5C] p-2.5 rounded-full shadow-inner relative">
-                  <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
-                </div>
-                <div>
-                  <div class="font-black text-xl text-white">В ТОП!</div>
-                  <div class="text-xs text-white/60 font-bold uppercase tracking-wider">рекомендації</div>
-                </div>
-              </div>
 
               <!-- Central Phone Mockup / Reels Interface -->
               <div class="absolute inset-4 md:inset-x-8 md:inset-y-0 bg-white rounded-[2.5rem] border-[6px] border-white shadow-2xl transform lg:rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden group">
@@ -220,38 +216,91 @@
         <p class="text-lg text-[#2D6B46]/70 max-w-2xl mx-auto">Дисципліна сьогодні — це ваш вражаючий результат у 2026 році.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 auto-rows-[180px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <!-- 1: Team -->
-        <div class="bg-[#3B8C5C] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+        <div class="bg-[#3B8C5C] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col group overflow-hidden relative">
           <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
           <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-black/10 backdrop-blur-md">
             <i data-lucide="users" class="w-6 h-6 text-[#FDF6F0]"></i>
           </div>
-          <h3 class="text-xl font-bold leading-tight text-white relative z-10">Прорив у побудові команди</h3>
+          <h3 class="text-xl font-bold leading-tight text-white mb-2 relative z-10">Прорив у побудові команди</h3>
+          <p class="text-white/70 text-sm font-medium relative z-10">Залучайте нових партнерів завдяки щоденному контенту — ваші відео стають потужним інструментом рекрутингу.</p>
         </div>
         <!-- 2: Sales -->
-        <div class="bg-[#F7C5A8] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+        <div class="bg-[#F7C5A8] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col group overflow-hidden relative">
           <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
           <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-black/10 backdrop-blur-md">
             <i data-lucide="trending-up" class="w-6 h-6 text-[#2D6B46]"></i>
           </div>
-          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] relative z-10">Прорив у власних продажах</h3>
+          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] mb-2 relative z-10">Прорив у власних продажах</h3>
+          <p class="text-[#2D6B46]/70 text-sm font-medium relative z-10">30 відео = 30 точок контакту з клієнтом. Кожен Reels — це можливість показати продукт і отримати замовлення.</p>
         </div>
         <!-- 3: Instagram -->
-        <div class="bg-[#B8A9D4] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+        <div class="bg-[#B8A9D4] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col group overflow-hidden relative">
           <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
           <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-black/10 backdrop-blur-md">
             <i data-lucide="target" class="w-6 h-6 text-[#2D6B46]"></i>
           </div>
-          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] relative z-10">Вихід у рекомендації Instagram</h3>
+          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] mb-2 relative z-10">Вихід у рекомендації Instagram</h3>
+          <p class="text-[#2D6B46]/70 text-sm font-medium relative z-10">Регулярний контент навчає алгоритм — і Instagram починає показувати вас новій аудиторії, яка вас ще не знає.</p>
         </div>
         <!-- 4: Brand -->
-        <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+        <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col group overflow-hidden relative">
           <div class="absolute -right-8 -top-8 w-32 h-32 bg-[#FDF6F0] rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
           <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-[#FDF6F0]">
             <i data-lucide="award" class="w-6 h-6 text-[#3B8C5C]"></i>
           </div>
-          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] relative z-10">Формування особистого бренду</h3>
+          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] mb-2 relative z-10">Формування особистого бренду</h3>
+          <p class="text-[#2D6B46]/60 text-sm font-medium relative z-10">30 днів послідовності — і люди починають асоціювати вас з BRIONEL™. Ваше ім'я стає брендом.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-24 relative z-10 bg-[#2D6B46] rounded-[3rem] mx-4 sm:mx-8 lg:mx-16 overflow-hidden">
+    <div class="absolute top-[-30%] right-[-10%] w-[30rem] h-[30rem] bg-[#3B8C5C] rounded-full opacity-40 blur-[80px] pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-[#F7C5A8] font-bold mb-6">
+          <i data-lucide="map" class="w-5 h-5"></i> Просто і зрозуміло
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Як це працює?</h2>
+        <p class="text-lg text-white/60 max-w-xl mx-auto">Три кроки від рішення до нагороди</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        <!-- Connecting line (desktop) -->
+        <div class="hidden md:block absolute top-10 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-0.5 bg-gradient-to-r from-[#F7C5A8]/30 via-[#F7C5A8] to-[#F7C5A8]/30"></div>
+
+        <!-- Step 1 -->
+        <div class="relative text-center">
+          <div class="w-20 h-20 bg-[#F7C5A8] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(247,197,168,0.4)] relative z-10">
+            <i data-lucide="send" class="w-8 h-8 text-[#2D6B46]"></i>
+          </div>
+          <div class="inline-block px-3 py-1 rounded-full bg-white/10 text-[#F7C5A8] text-xs font-black uppercase tracking-widest mb-3">Крок 1</div>
+          <h3 class="text-xl font-bold text-white mb-2">Приєднайтесь до Telegram</h3>
+          <p class="text-white/60 text-sm font-medium">Перейдіть за посиланням у Telegram-канал BRIONEL™ та зареєструйтесь на марафон</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative text-center">
+          <div class="w-20 h-20 bg-white/10 border-2 border-[#F7C5A8]/40 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+            <i data-lucide="video" class="w-8 h-8 text-[#F7C5A8]"></i>
+          </div>
+          <div class="inline-block px-3 py-1 rounded-full bg-white/10 text-[#F7C5A8] text-xs font-black uppercase tracking-widest mb-3">Крок 2</div>
+          <h3 class="text-xl font-bold text-white mb-2">Знімайте 1 відео щодня</h3>
+          <p class="text-white/60 text-sm font-medium">30 днів — 30 Reels. Про продукт, про бізнес, про себе. Ми допоможемо з ідеями</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative text-center">
+          <div class="w-20 h-20 bg-white/10 border-2 border-[#F7C5A8]/40 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+            <i data-lucide="gift" class="w-8 h-8 text-[#F7C5A8]"></i>
+          </div>
+          <div class="inline-block px-3 py-1 rounded-full bg-white/10 text-[#F7C5A8] text-xs font-black uppercase tracking-widest mb-3">Крок 3</div>
+          <h3 class="text-xl font-bold text-white mb-2">Отримайте 2000 грн</h3>
+          <p class="text-white/60 text-sm font-medium">Виконайте умови марафону — і сертифікат на продукцію BRIONEL™ ваш</p>
         </div>
       </div>
     </div>
@@ -330,7 +379,7 @@
   </section>
 
   <!-- Prizes Section -->
-  <section class="py-24 relative">
+  <section id="prizes" class="py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-[#F7C5A8] rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-white opacity-20 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
@@ -407,9 +456,9 @@
       <h2 class="text-4xl md:text-6xl font-black text-[#FDF6F0] mb-8 leading-tight">
         Готові розпочати свою <br><span class="text-[#F7C5A8]">весну змін?</span>
       </h2>
-      <button class="px-10 py-5 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-black text-xl transition-all shadow-[0_0_40px_rgba(247,197,168,0.3)] hover:shadow-[0_0_60px_rgba(247,197,168,0.5)] transform hover:scale-105">
+      <a href="#" class="inline-block px-10 py-5 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-black text-xl transition-all shadow-[0_0_40px_rgba(247,197,168,0.3)] hover:shadow-[0_0_60px_rgba(247,197,168,0.5)] transform hover:scale-105">
         Приєднатись до марафону
-      </button>
+      </a>
 
       <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-2 text-[#FDF6F0]">
@@ -429,6 +478,29 @@
     requestAnimationFrame(() => {
       document.querySelectorAll('.hero-left, .hero-right').forEach(el => el.classList.add('visible'));
     });
+
+    // Countdown Timer
+    const startDate = new Date('2026-03-09T00:00:00');
+    function updateCountdown() {
+      const now = new Date();
+      const diff = startDate - now;
+      if (diff <= 0) {
+        document.getElementById('countdown-timer').classList.add('hidden');
+        document.getElementById('countdown-label').classList.add('hidden');
+        document.getElementById('marathon-started').classList.remove('hidden');
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('cd-days').textContent = days;
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+      setTimeout(updateCountdown, 1000);
+    }
+    updateCountdown();
   </script>
 </body>
 </html>
