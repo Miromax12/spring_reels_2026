@@ -478,12 +478,29 @@
       </a>
 
       <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="flex items-center gap-2 text-[#FDF6F0]">
-          <div class="bg-white/10 p-2 rounded-xl">
-            <i data-lucide="flower-2" class="w-6 h-6 text-[#F7C5A8]"></i>
-          </div>
-          <span class="font-extrabold text-2xl tracking-tight">BRIONEL™</span>
-        </div>
+       
+        
+<div class="flex items-center gap-2 cursor-pointer">
+  
+  <!-- Logo Image -->
+  <img 
+    src="/logo.png" 
+    alt="BRIONEL™"
+    class="h-10 w-auto object-contain"
+    onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+  />
+
+  <!-- Fallback Text -->
+  <span 
+    class="font-extrabold text-2xl tracking-tight text-[#FDF6F0] hidden"
+  >
+    BRIONEL™
+  </span>
+
+</div>
+
+
+        
         <p class="text-white/50 text-sm font-medium">© 2026 Всі права захищені. Весняний розквіт.</p>
       </div>
     </div>
