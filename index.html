@@ -79,6 +79,9 @@
     html {
       scroll-behavior: smooth;
     }
+    section[id] {
+      scroll-margin-top: 5rem;
+    }
   </style>
 </head>
 <body id="top" class="min-h-screen bg-[#FDF6F0] font-sans text-[#2D6B46] overflow-x-hidden relative">
@@ -98,7 +101,7 @@
     <!-- Navbar (dark) -->
     <nav class="fixed top-0 inset-x-0 w-full z-50 border-b border-white/10 bg-[#2D6B46]/90 backdrop-blur-md">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20 gap-4">
+        <div class="flex justify-between items-center h-16 lg:h-20 gap-4">
           <a href="#top" class="flex items-center gap-2 cursor-pointer">
             <!-- Logo Image -->
             <img
@@ -122,16 +125,45 @@
             <a href="#newcomers" class="px-3 py-2 rounded-full text-white/80 hover:text-white hover:bg-white/10 text-sm font-semibold transition-colors">Новачкам</a>
           </div>
 
-          <a href="#prizes" class="bg-[#F7C5A8] hover:bg-white text-[#2D6B46] px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_8px_20px_rgba(247,197,168,0.3)] text-sm sm:text-base flex items-center gap-2">
+          <!-- Mobile menu toggle -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Відкрити меню"
+            aria-expanded="false"
+            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+          >
+            <i data-lucide="menu" class="w-6 h-6" id="mobile-menu-icon-open"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="mobile-menu-icon-close"></i>
+          </button>
+
+          <a href="#prizes" class="hidden sm:flex bg-[#F7C5A8] hover:bg-white text-[#2D6B46] px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_8px_20px_rgba(247,197,168,0.3)] text-sm sm:text-base items-center gap-2">
             Умови участі
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile navigation panel -->
+      <div
+        id="mobile-menu-panel"
+        class="lg:hidden hidden fixed inset-x-0 top-16 bottom-0 bg-[#2D6B46]/95 backdrop-blur-lg z-40 border-t border-white/10"
+      >
+        <div class="flex flex-col items-center justify-center gap-6 pt-12">
+          <a href="#benefits" class="mobile-nav-link text-2xl font-bold text-white/80 hover:text-white transition-colors">Переваги</a>
+          <a href="#how-it-works" class="mobile-nav-link text-2xl font-bold text-white/80 hover:text-white transition-colors">Як це працює</a>
+          <a href="#experience" class="mobile-nav-link text-2xl font-bold text-white/80 hover:text-white transition-colors">Досвід</a>
+          <a href="#prizes" class="mobile-nav-link text-2xl font-bold text-white/80 hover:text-white transition-colors">Призи</a>
+          <a href="#newcomers" class="mobile-nav-link text-2xl font-bold text-white/80 hover:text-white transition-colors">Новачкам</a>
+          <a href="https://t.me/+UTOylZrud1NmMzMy" class="mobile-nav-link mt-4 px-8 py-4 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-bold text-lg transition-all">
+            Приєднатись
           </a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-20 pb-32 lg:pt-32 lg:pb-40 min-h-[calc(100vh-80px)] flex items-center">
+    <section class="relative pt-16 pb-20 sm:pb-32 lg:pt-32 lg:pb-40 min-h-[calc(100vh-80px)] flex items-center">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
@@ -145,7 +177,7 @@
               Instagram Reels Марафон
             </div>
 
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#FDF6F0] mb-6 leading-[1.1]">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#FDF6F0] mb-6 leading-[1.1]">
               30 Днів <br>
               <span class="relative">
                 <span class="relative z-10 text-[#F7C5A8]">
@@ -170,19 +202,19 @@
               <div id="countdown-timer" class="flex gap-3 sm:gap-4">
                 <div class="w-[72px] h-[72px] sm:w-20 sm:h-20 flex flex-col items-center justify-center text-center bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg">
                   <div id="cd-days" class="text-3xl font-black text-white leading-none">0</div>
-                  <div class="text-[10px] sm:text-xs text-white/50 font-bold uppercase mt-1">дні</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">дні</div>
                 </div>
                 <div class="w-[72px] h-[72px] sm:w-20 sm:h-20 flex flex-col items-center justify-center text-center bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg">
                   <div id="cd-hours" class="text-3xl font-black text-white leading-none">0</div>
-                  <div class="text-[10px] sm:text-xs text-white/50 font-bold uppercase mt-1">год</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">год</div>
                 </div>
                 <div class="w-[72px] h-[72px] sm:w-20 sm:h-20 flex flex-col items-center justify-center text-center bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg">
                   <div id="cd-mins" class="text-3xl font-black text-white leading-none">0</div>
-                  <div class="text-[10px] sm:text-xs text-white/50 font-bold uppercase mt-1">хв</div>
+                  <div class="text-xs text-white/50 font-bold uppercase mt-1">хв</div>
                 </div>
                 <div class="w-[72px] h-[72px] sm:w-20 sm:h-20 flex flex-col items-center justify-center text-center bg-[#F7C5A8]/10 border border-[#F7C5A8]/30 rounded-2xl backdrop-blur-md shadow-lg">
                   <div id="cd-secs" class="text-3xl font-black text-[#F7C5A8] leading-none animate-pulse">0</div>
-                  <div class="text-[10px] sm:text-xs text-[#F7C5A8]/70 font-bold uppercase mt-1">сек</div>
+                  <div class="text-xs text-[#F7C5A8]/70 font-bold uppercase mt-1">сек</div>
                 </div>
               </div>
               <p id="marathon-started" class="hidden text-2xl font-black text-[#F7C5A8] mt-3">Марафон розпочато! 🌸</p>
@@ -200,7 +232,7 @@
             <div class="relative w-full max-w-[22rem] lg:max-w-[25rem] xl:max-w-[29rem] mx-auto aspect-[4/5]">
 
               <!-- Floating Card 1 -->
-              <div class="hidden sm:flex absolute top-16 -left-8 md:-left-16 xl:-left-24 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float z-30 items-center gap-3 border-l-4 border-[#F7C5A8]">
+              <div class="hidden md:flex absolute top-16 -left-8 md:-left-16 xl:-left-24 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float z-30 items-center gap-3 border-l-4 border-[#F7C5A8]">
                 <div class="bg-[#F7C5A8] p-2.5 rounded-full shadow-inner">
                   <i data-lucide="heart" class="w-6 h-6 text-white" style="fill:white;"></i>
                 </div>
@@ -211,7 +243,7 @@
               </div>
 
               <!-- Floating Card 2 -->
-              <div class="hidden sm:flex absolute bottom-32 -right-4 md:-right-14 xl:-right-20 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float animation-delay-2000 z-30 items-center gap-3 border-l-4 border-[#F7C5A8]">
+              <div class="hidden md:flex absolute bottom-32 -right-4 md:-right-14 xl:-right-20 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float animation-delay-2000 z-30 items-center gap-3 border-l-4 border-[#F7C5A8]">
                 <div class="bg-[#3B8C5C] p-2.5 rounded-full shadow-inner">
                   <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
                 </div>
@@ -222,7 +254,7 @@
               </div>
 
               <!-- Central Phone Mockup / Reels Interface -->
-              <div class="absolute inset-4 md:inset-x-8 md:inset-y-0 bg-white rounded-[2.5rem] border-[6px] border-white shadow-2xl transform-gpu lg:rotate-[3deg] lg:hover:rotate-0 lg:hover:-translate-y-1 transition-transform duration-500 will-change-transform phone-shell-fix">
+              <div class="absolute inset-2 sm:inset-4 md:inset-x-8 md:inset-y-0 bg-white rounded-[2.5rem] border-[6px] border-white shadow-2xl transform-gpu lg:rotate-[3deg] lg:hover:rotate-0 lg:hover:-translate-y-1 transition-transform duration-500 will-change-transform phone-shell-fix">
                 <div class="phone-screen-clip group">
                   <!-- Phone Notch -->
                   <div class="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-black/10 rounded-full z-20 backdrop-blur-md"></div>
@@ -286,7 +318,7 @@
   <!-- ==================== END DARK HERO ZONE ==================== -->
 
   <!-- Benefits Section — 4 cards, 2×2 grid -->
-  <section id="benefits" class="py-24 relative z-10">
+  <section id="benefits" class="py-12 md:py-24 relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-extrabold text-[#2D6B46] mb-4">Що дає марафон? 🔥</h2>
@@ -335,7 +367,7 @@
   </section>
 
   <!-- How It Works Section -->
-  <section id="how-it-works" class="py-24 relative z-10 bg-[#2D6B46] rounded-[3rem] mx-4 sm:mx-8 lg:mx-16 overflow-hidden">
+  <section id="how-it-works" class="py-12 md:py-24 relative z-10 bg-[#2D6B46] rounded-2xl sm:rounded-[3rem] mx-4 sm:mx-8 lg:mx-16 overflow-hidden">
     <div class="absolute top-[-30%] right-[-10%] w-[30rem] h-[30rem] bg-[#3B8C5C] rounded-full opacity-40 blur-[80px] pointer-events-none"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-16">
@@ -384,7 +416,7 @@
   </section>
 
   <!-- Social Proof — Previous Events -->
-  <section id="experience" class="py-24 relative z-10">
+  <section id="experience" class="py-12 md:py-24 relative z-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B8A9D4]/20 text-[#2D6B46] font-bold mb-6">
@@ -456,7 +488,7 @@
   </section>
 
   <!-- Prizes Section -->
-  <section id="prizes" class="py-24 relative">
+  <section id="prizes" class="py-12 md:py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-[#F7C5A8] rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-white opacity-20 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
@@ -501,7 +533,7 @@
 
           <div class="relative">
             <div class="bg-gradient-to-br from-[#2D6B46] to-[#3B8C5C] rounded-[2.5rem] p-1 shadow-2xl transform lg:rotate-3 hover:rotate-0 transition-all duration-500">
-              <div class="bg-[#FDF6F0] rounded-[2.3rem] p-10 text-center relative overflow-hidden">
+              <div class="bg-[#FDF6F0] rounded-[2.3rem] p-6 md:p-10 text-center relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-[#B8A9D4] via-[#F7C5A8] to-[#3B8C5C]"></div>
                 <div class="w-24 h-24 bg-[#F7C5A8]/30 rounded-full flex items-center justify-center mx-auto mb-6">
                   <div class="w-16 h-16 bg-[#F7C5A8] rounded-full flex items-center justify-center shadow-inner">
@@ -520,7 +552,7 @@
   </section>
 
   <!-- Newcomer Support Section -->
-  <section id="newcomers" class="py-20 relative z-10">
+  <section id="newcomers" class="py-12 md:py-20 relative z-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="rounded-[2.5rem] overflow-hidden shadow-xl border border-[#2D6B46]/10">
         <div class="grid lg:grid-cols-2">
@@ -566,7 +598,7 @@
   </section>
 
   <!-- Footer / CTA -->
-  <footer class="bg-[#2D6B46] py-20 relative overflow-hidden mt-10 rounded-t-[4rem]">
+  <footer class="bg-[#2D6B46] py-12 md:py-20 relative overflow-hidden mt-10 rounded-t-3xl sm:rounded-t-[4rem]">
     <div class="absolute top-[-50%] left-[-10%] w-[40rem] h-[40rem] bg-[#3B8C5C] rounded-full mix-blend-screen opacity-50 blur-[100px] animate-blob"></div>
     <div class="absolute bottom-[-50%] right-[-10%] w-[30rem] h-[30rem] bg-[#B8A9D4] rounded-full mix-blend-screen opacity-20 blur-[80px] animate-blob animation-delay-2000"></div>
 
@@ -657,6 +689,33 @@
     requestAnimationFrame(() => {
       document.querySelectorAll('.hero-left, .hero-right').forEach(el => el.classList.add('visible'));
     });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+    const mobileMenuIconOpen = document.getElementById('mobile-menu-icon-open');
+    const mobileMenuIconClose = document.getElementById('mobile-menu-icon-close');
+
+    if (mobileMenuBtn && mobileMenuPanel) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenuPanel.classList.contains('hidden');
+        mobileMenuPanel.classList.toggle('hidden');
+        mobileMenuIconOpen.classList.toggle('hidden');
+        mobileMenuIconClose.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+        document.body.classList.toggle('overflow-hidden', !isOpen);
+      });
+
+      mobileMenuPanel.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuPanel.classList.add('hidden');
+          mobileMenuIconOpen.classList.remove('hidden');
+          mobileMenuIconClose.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('overflow-hidden');
+        });
+      });
+    }
 
     // Back to top visibility
     const toTopBtn = document.getElementById('to-top-btn');
