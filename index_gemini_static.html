@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRIONEL™ — 30 Днів Весняного Розквіту</title>
+  <meta name="description" content="Instagram Reels марафон: 30 днів — 30 відео. Для жінок BRIONEL™.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .animate-blob { animation: blob 7s infinite alternate ease-in-out; }
+    .animate-float { animation: float 4s ease-in-out infinite; }
+    .animation-delay-2000 { animation-delay: 2s; }
+    .animation-delay-4000 { animation-delay: 4s; }
+
+    .glass-card-dark {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+
+    /* Entry animations */
+    .hero-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: all 1s ease;
+    }
+    .hero-right {
+      opacity: 0;
+      transform: translateY(80px);
+      transition: all 1s ease 0.3s;
+    }
+    .hero-left.visible,
+    .hero-right.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#FDF6F0] font-sans text-[#2D6B46] overflow-x-hidden relative">
+
+  <!-- ==================== DARK HERO ZONE ==================== -->
+  <div class="bg-[#2D6B46] relative overflow-hidden">
+
+    <!-- Hero Background Blobs (adapted for dark) -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+      <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#B8A9D4] rounded-full mix-blend-soft-light blur-3xl opacity-30 animate-blob"></div>
+      <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-[#F7C5A8] rounded-full mix-blend-soft-light blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-[-20%] left-[20%] w-[30rem] h-[30rem] bg-[#3B8C5C] rounded-full mix-blend-soft-light blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navbar (dark) -->
+    <nav class="relative w-full z-50 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <div class="bg-[#F7C5A8] p-2 rounded-xl">
+              <i data-lucide="flower-2" class="w-6 h-6 text-[#2D6B46]"></i>
+            </div>
+            <span class="font-extrabold text-2xl tracking-tight text-[#FDF6F0]">BRIONEL™</span>
+          </div>
+          <button class="bg-[#F7C5A8] hover:bg-white text-[#2D6B46] px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_8px_20px_rgba(247,197,168,0.3)] text-sm sm:text-base flex items-center gap-2">
+            Приєднатись
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 lg:pt-32 lg:pb-40 min-h-[calc(100vh-80px)] flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Left Side -->
+          <div class="hero-left z-10">
+            <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-bold mb-8 animate-float">
+              <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F7C5A8] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#F7C5A8]"></span>
+              </span>
+              Instagram Reels Марафон
+            </div>
+
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#FDF6F0] mb-6 leading-[1.1]">
+              30 Днів <br>
+              <span class="relative">
+                <span class="relative z-10 text-[#F7C5A8]">
+                  Весняного Розквіту
+                </span>
+                <svg class="absolute -bottom-2 left-0 w-full h-4 text-[#F7C5A8]/40 -z-10" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.00016 6.84863C47.1165 2.11326 114.53 -1.82195 198.243 7.64861" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="inline-block ml-2">🌷</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-white/70 mb-10 max-w-lg font-medium">
+              Приєднуйся до марафону та розкрий свій потенціал у створенні контенту. 1 день = 1 відео.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center gap-5">
+              <button class="w-full sm:w-auto px-8 py-4 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-bold text-lg transition-all shadow-[0_10px_30px_rgba(247,197,168,0.3)] hover:shadow-[0_10px_40px_rgba(247,197,168,0.5)] transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                Приєднатись до марафону
+              </button>
+              <div class="flex items-center gap-4">
+                <div class="flex flex-col justify-center px-6 py-3 bg-white/10 rounded-2xl border border-white/20">
+                  <span class="text-sm text-white/60 font-semibold uppercase tracking-wider">Старт</span>
+                  <span class="text-white font-bold text-lg flex items-center gap-2">
+                    <i data-lucide="calendar-days" class="w-4 h-4 text-[#F7C5A8]"></i> 09.03
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Phone Mockup -->
+          <div class="hero-right mt-10 lg:mt-0 relative">
+            <div class="relative w-full max-w-sm mx-auto aspect-[4/5]">
+
+              <!-- Floating Card 1: Likes -->
+              <div class="absolute top-12 -left-8 md:-left-16 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float z-30 flex items-center gap-3 border-l-4 border-[#F7C5A8]">
+                <div class="bg-[#F7C5A8] p-2.5 rounded-full shadow-inner">
+                  <i data-lucide="heart" class="w-6 h-6 text-white" style="fill:white;"></i>
+                </div>
+                <div>
+                  <div class="font-black text-xl text-white">+1,250</div>
+                  <div class="text-xs text-white/60 font-bold uppercase tracking-wider">реакцій</div>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Views/Top -->
+              <div class="absolute bottom-24 -right-4 md:-right-12 glass-card-dark p-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] animate-float animation-delay-2000 z-30 flex items-center gap-3 border-l-4 border-[#F7C5A8]">
+                <div class="bg-[#3B8C5C] p-2.5 rounded-full shadow-inner relative">
+                  <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                  <div class="font-black text-xl text-white">В ТОП!</div>
+                  <div class="text-xs text-white/60 font-bold uppercase tracking-wider">рекомендації</div>
+                </div>
+              </div>
+
+              <!-- Central Phone Mockup / Reels Interface -->
+              <div class="absolute inset-4 md:inset-x-8 md:inset-y-0 bg-white rounded-[2.5rem] border-[6px] border-white shadow-2xl transform lg:rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden group">
+                <!-- Phone Notch -->
+                <div class="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-black/10 rounded-full z-20 backdrop-blur-md"></div>
+
+                <!-- Video Background -->
+                <div class="absolute inset-0 bg-gradient-to-br from-[#B8A9D4] via-[#F7C5A8] to-[#FDF6F0] z-0">
+                  <div class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at center, white, transparent, transparent);"></div>
+                </div>
+
+                <!-- Center Play Button -->
+                <div class="absolute inset-0 flex items-center justify-center z-10">
+                  <div class="w-20 h-20 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform cursor-pointer shadow-xl border border-white/50 relative">
+                    <div class="absolute inset-0 rounded-full border border-white animate-ping opacity-50"></div>
+                    <i data-lucide="play" class="w-8 h-8 text-white ml-1" style="fill:white;"></i>
+                  </div>
+                </div>
+
+                <!-- Bottom Reels UI Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent z-10 pt-20">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md p-1 border-2 border-[#3B8C5C]">
+                      <div class="w-full h-full bg-[#3B8C5C] rounded-full flex items-center justify-center">
+                        <i data-lucide="flower-2" class="w-4 h-4 text-white"></i>
+                      </div>
+                    </div>
+                    <div class="font-bold text-white drop-shadow-md">@brionel_team</div>
+                  </div>
+                  <p class="text-sm text-white/90 font-medium leading-tight mb-2 drop-shadow-md">
+                    День 1: Починаємо наш весняний розквіт! Готові розривати стрічку? 🌸✨
+                  </p>
+                  <p class="text-xs text-white/70 font-bold">#reels #brionel #весна</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SVG Wave Separator -->
+    <div class="relative -mb-1">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block">
+        <path d="M0 60C240 120 480 0 720 60C960 120 1200 0 1440 60V120H0V60Z" fill="#FDF6F0"/>
+      </svg>
+    </div>
+
+  </div>
+  <!-- ==================== END DARK HERO ZONE ==================== -->
+
+  <!-- Benefits Section — 4 cards, 2×2 grid -->
+  <section class="py-24 relative z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#2D6B46] mb-4">Що дає марафон? 🔥</h2>
+        <p class="text-lg text-[#2D6B46]/70 max-w-2xl mx-auto">Дисципліна сьогодні — це ваш вражаючий результат у 2026 році.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 auto-rows-[180px]">
+        <!-- 1: Team -->
+        <div class="bg-[#3B8C5C] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-black/10 backdrop-blur-md">
+            <i data-lucide="users" class="w-6 h-6 text-[#FDF6F0]"></i>
+          </div>
+          <h3 class="text-xl font-bold leading-tight text-white relative z-10">Прорив у побудові команди</h3>
+        </div>
+        <!-- 2: Sales -->
+        <div class="bg-[#F7C5A8] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-black/10 backdrop-blur-md">
+            <i data-lucide="trending-up" class="w-6 h-6 text-[#2D6B46]"></i>
+          </div>
+          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] relative z-10">Прорив у власних продажах</h3>
+        </div>
+        <!-- 3: Instagram -->
+        <div class="bg-[#B8A9D4] rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-black/10 backdrop-blur-md">
+            <i data-lucide="target" class="w-6 h-6 text-[#2D6B46]"></i>
+          </div>
+          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] relative z-10">Вихід у рекомендації Instagram</h3>
+        </div>
+        <!-- 4: Brand -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-[#FDF6F0] rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 bg-[#FDF6F0]">
+            <i data-lucide="award" class="w-6 h-6 text-[#3B8C5C]"></i>
+          </div>
+          <h3 class="text-xl font-bold leading-tight text-[#2D6B46] relative z-10">Формування особистого бренду</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prizes Section -->
+  <section class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#F7C5A8] rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-white opacity-20 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 text-[#2D6B46] font-bold mb-6 backdrop-blur-sm">
+              <i data-lucide="gift" class="w-5 h-5"></i> Гарантовані призи
+            </div>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-[#2D6B46] mb-6 leading-tight">
+              Подарунок для <br><span class="text-white drop-shadow-md">ВСІХ учасників</span> 🎁
+            </h2>
+            <p class="text-lg text-[#2D6B46]/80 mb-8 font-medium">Отримують всі, хто виконає умови:</p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 bg-white/40 p-4 rounded-2xl backdrop-blur-sm border border-white/50 hover:bg-white/60 transition-colors">
+                <div class="bg-[#3B8C5C] rounded-full p-1 shadow-sm shrink-0">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-[#2D6B46] font-bold">Викласти мінімум 30 відео Reels за 30 днів</span>
+              </div>
+              <div class="flex items-center gap-4 bg-white/40 p-4 rounded-2xl backdrop-blur-sm border border-white/50 hover:bg-white/60 transition-colors">
+                <div class="bg-[#3B8C5C] rounded-full p-1 shadow-sm shrink-0">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-[#2D6B46] font-bold">Мінімум 15 відео про продукт (з них 3 — про RUTIN)</span>
+              </div>
+              <div class="flex items-center gap-4 bg-white/40 p-4 rounded-2xl backdrop-blur-sm border border-white/50 hover:bg-white/60 transition-colors">
+                <div class="bg-[#3B8C5C] rounded-full p-1 shadow-sm shrink-0">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-[#2D6B46] font-bold">Мінімум 8 відео про бізнес BRIONEL™</span>
+              </div>
+              <div class="flex items-center gap-4 bg-white/40 p-4 rounded-2xl backdrop-blur-sm border border-white/50 hover:bg-white/60 transition-colors">
+                <div class="bg-[#3B8C5C] rounded-full p-1 shadow-sm shrink-0">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-[#2D6B46] font-bold">Особистий оборот за березень — від 50 балів</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="bg-gradient-to-br from-[#2D6B46] to-[#3B8C5C] rounded-[2.5rem] p-1 shadow-2xl transform lg:rotate-3 hover:rotate-0 transition-all duration-500 animate-float">
+              <div class="bg-[#FDF6F0] rounded-[2.3rem] p-10 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-[#B8A9D4] via-[#F7C5A8] to-[#3B8C5C]"></div>
+                <div class="w-24 h-24 bg-[#F7C5A8]/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div class="w-16 h-16 bg-[#F7C5A8] rounded-full flex items-center justify-center shadow-inner">
+                    <i data-lucide="award" class="w-8 h-8 text-[#2D6B46]"></i>
+                  </div>
+                </div>
+                <h3 class="text-xl text-[#2D6B46]/70 font-bold uppercase tracking-widest mb-2">Нагорода</h3>
+                <div class="text-5xl md:text-6xl font-black text-[#2D6B46] mb-4 drop-shadow-sm">2000 грн</div>
+                <div class="inline-block px-4 py-2 bg-[#B8A9D4]/20 rounded-full text-[#2D6B46] font-bold text-sm">Сертифікат на продукцію</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / CTA -->
+  <footer class="bg-[#2D6B46] py-20 relative overflow-hidden mt-10 rounded-t-[4rem]">
+    <div class="absolute top-[-50%] left-[-10%] w-[40rem] h-[40rem] bg-[#3B8C5C] rounded-full mix-blend-screen opacity-50 blur-[100px] animate-blob"></div>
+    <div class="absolute bottom-[-50%] right-[-10%] w-[30rem] h-[30rem] bg-[#B8A9D4] rounded-full mix-blend-screen opacity-20 blur-[80px] animate-blob animation-delay-2000"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <!-- Motivational quote (moved from removed section) -->
+      <p class="text-2xl font-bold text-[#FDF6F0]/60 mb-2">Ми не шукаємо ідеальних блогерів.</p>
+      <p class="text-3xl md:text-4xl font-black text-white mb-12">Ми ростимо лідерів.</p>
+
+      <span class="inline-block py-1 px-4 rounded-full bg-[#F7C5A8]/20 text-[#F7C5A8] font-bold text-sm tracking-widest uppercase mb-6 border border-[#F7C5A8]/30">Фінальний крок</span>
+      <h2 class="text-4xl md:text-6xl font-black text-[#FDF6F0] mb-8 leading-tight">
+        Готова розпочати свою <br><span class="text-[#F7C5A8]">весну змін?</span>
+      </h2>
+      <button class="px-10 py-5 bg-[#F7C5A8] hover:bg-white text-[#2D6B46] rounded-full font-black text-xl transition-all shadow-[0_0_40px_rgba(247,197,168,0.3)] hover:shadow-[0_0_60px_rgba(247,197,168,0.5)] transform hover:scale-105">
+        Приєднатись до марафону
+      </button>
+
+      <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2 text-[#FDF6F0]">
+          <div class="bg-white/10 p-2 rounded-xl">
+            <i data-lucide="flower-2" class="w-6 h-6 text-[#F7C5A8]"></i>
+          </div>
+          <span class="font-extrabold text-2xl tracking-tight">BRIONEL™</span>
+        </div>
+        <p class="text-white/50 text-sm font-medium">© 2026 Всі права захищені. Весняний розквіт.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide icons & entry animations -->
+  <script>
+    lucide.createIcons();
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.hero-left, .hero-right').forEach(el => el.classList.add('visible'));
+    });
+  </script>
+</body>
+</html>
