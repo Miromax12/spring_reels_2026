@@ -73,18 +73,29 @@
     <nav class="relative w-full z-50 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <div class="flex items-center gap-2 cursor-pointer">
-            <div class="bg-[#F7C5A8] p-2 rounded-xl">
-              <img 
-                src="/logo.png" 
-                alt="BRIONEL Logo" 
-                class="w-6 h-6 object-contain"
-              />
-            </div>
-            <span class="font-extrabold text-2xl tracking-tight text-[#FDF6F0]">
-              BRIONEL™
-            </span>
-          </div>
+
+
+<div class="flex items-center gap-2 cursor-pointer">
+  
+  <!-- Logo Image -->
+  <img 
+    src="/logo.png" 
+    alt="BRIONEL™"
+    class="h-10 w-auto object-contain"
+    onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+  />
+
+  <!-- Fallback Text -->
+  <span 
+    class="font-extrabold text-2xl tracking-tight text-[#FDF6F0] hidden"
+  >
+    BRIONEL™
+  </span>
+
+</div>
+
+          
+          
           <a href="#prizes" class="bg-[#F7C5A8] hover:bg-white text-[#2D6B46] px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_8px_20px_rgba(247,197,168,0.3)] text-sm sm:text-base flex items-center gap-2">
             Умови участі
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
