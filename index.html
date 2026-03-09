@@ -270,20 +270,21 @@
                   </div>
 
                   <!-- Center Play Button -->
-                  <div class="absolute inset-0 flex items-center justify-center z-10">
+                  <div class="absolute inset-0 flex items-center justify-center z-20">
                     <button
                       id="hero-video-open"
                       type="button"
                       aria-label="Відкрити демо-відео"
                       class="w-20 h-20 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform cursor-pointer shadow-xl border border-white/50 relative"
+                      style="touch-action: manipulation;"
                     >
-                      <div class="absolute inset-0 rounded-full border border-white animate-ping opacity-50"></div>
-                      <i data-lucide="play" class="w-8 h-8 text-white ml-1" style="fill:white;"></i>
+                      <div class="absolute inset-0 rounded-full border border-white animate-ping opacity-50 pointer-events-none"></div>
+                      <i data-lucide="play" class="w-8 h-8 text-white ml-1 pointer-events-none" style="fill:white;"></i>
                     </button>
                   </div>
 
                   <!-- Bottom Reels UI Overlay -->
-                  <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent z-10 pt-20">
+                  <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent z-10 pt-20 pointer-events-none">
                     <div class="flex items-center gap-3 mb-3">
                       <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md p-1 border-2 border-[#3B8C5C]">
                         <div class="w-full h-full bg-[#3B8C5C] rounded-full flex items-center justify-center">
